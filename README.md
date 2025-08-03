@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# Skill Swap Platform
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+##  Project Objective
 
-## Get started
+In today’s digital age, learning is becoming more collaborative and community-driven. **Skill Swap Platform** is a mobile-first web application that connects individuals with complementary skills to engage in peer-to-peer learning. It allows users to swap their expertise, schedule live sessions, and share educational content in a social media–like environment. The platform fosters a supportive learning ecosystem, especially for students, freelancers, professionals, and hobbyists seeking growth through real-time collaboration.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+##  Features
 
-2. Start the app
+-  **Skill-Based Matchmaking**  
+  Connect with users based on skills you offer and skills you want to learn.
 
-   ```bash
-   npx expo start
-   ```
+-  **Skill Swapping Sessions**  
+  Schedule collaborative learning tasks or one-on-one sessions.
 
-In the output, you'll find options to open the app in a
+-  **Content Sharing**  
+  Post text, images, or videos like Instagram — visible to your connections only.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **User Profiles**  
+  Customize your profile, list your skills, interests, and availability.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+-  **Messaging System**  
+  Built-in chat to collaborate or schedule sessions.
 
-## Get a fresh project
+-  **Notifications**  
+  Get alerts for messages, posts, matches, or session requests.
 
-When you're ready, run:
+-  **Feedback System**  
+  Rate and review your partners after sessions to ensure quality.
+
+-  **Admin Panel**  
+  Manage users, moderate content, and track system analytics.
+
+---
+
+## Technologies Used
+
+###  Frontend
+- React Native (Expo)
+- React Navigation
+  
+###  Backend
+- Firebase Authentication
+- Firebase Firestore (Real-time database)
+- Firebase Storage
+- Firebase Cloud Messaging (for notifications)
+
+---
+
+##  Functional Requirements (Summary)
+
+- User authentication (email verification)
+- Profile management
+- Matchmaking algorithm (collaborative filtering)
+- Skill swap session scheduling and history
+- Direct messaging and attachments
+- Social feed for media/text posts
+- Rating and feedback system
+- Search & filter by skills, ratings, and availability
+- Admin moderation dashboard
+
+---
+
+## How to Run the Project
+
+###  Prerequisites
+- Node.js (v18+)
+- Expo CLI:  
+  Install using `npm install -g expo-cli`
+- Firebase project set up with:
+  - Authentication (Email/Password)
+  - Firestore Database
+  - Firebase Storage
+
+---
+
+###  Run the App
+
+1. **Clone the Repository**
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/FajarAsif842/SkillSwap.git
+cd SkillSwap
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**2. Install Dependencies**
+   npm install
+**3. Start the App**
 
-## Learn more
+      expo start
+      Connect with Expo Go (on phone)
 
-To learn more about developing your project with Expo, look at the following resources:
+Scan the QR code to launch the app on your Android/iOS device.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+** Firebase Setup**
+Go to https://console.firebase.google.com
 
-## Join the community
+Create a new project called SkillSwap
 
-Join our community of developers creating universal apps.
+Enable Authentication, Firestore, and Storage
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Replace the Firebase config in /firebaseConfig.js with your project credentials
+
+// firebaseConfig.js
+export const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-app.firebaseapp.com",
+  projectId: "your-app-id",
+  storageBucket: "your-app.appspot.com",
+  messagingSenderId: "your-id",
+  appId: "your-app-id",
+};
+
+
